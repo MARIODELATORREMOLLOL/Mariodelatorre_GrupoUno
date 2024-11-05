@@ -6,5 +6,5 @@ export default function ProductPage(){
         <div className="container mx-auto">
             <ItemList />
         </div>   
-    )
+    );
 }

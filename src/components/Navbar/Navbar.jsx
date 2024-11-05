@@ -1,19 +1,23 @@
 import { Link } from 'react-router-dom';
+
 export default function Navbar() {
     return (
-        <nav>
-            <ul className="flex">
-                <li className="mx-[15px] text-[14px] font-normal leading-[20px] uppercase text-[rgb(45,58,75)] transition duration-300 ease-linear hover:text-[rgb(255,225,21)] hover:outline-0 hover:no-underline hover:bg-none">
-                    <Link to="/">Home</Link>
+        <nav className="p-4">
+            <ul className="flex flex-col sm:flex-row space-x-0 sm:space-x-6 justify-center">
+                <li className="mb-2 sm:mb-0">
+                    <Link to="/" className="text-white text-lg font-medium hover:text-blue-400 transition-colors duration-200">
+                        Inicio
+                    </Link>
                 </li>
-                <li className="mx-[15px] text-[14px] font-normal leading-[20px] uppercase text-[rgb(45,58,75)] transition duration-300 ease-linear hover:text-[rgb(255,225,21)] hover:outline-0 hover:no-underline hover:bg-none">
-                    <Link to="/products">Shop</Link>
+                <li className="mb-2 sm:mb-0">
+                    <Link to="/about" className="text-white text-lg font-medium hover:text-blue-400 transition-colors duration-200">
+                        Acerca
+                    </Link>
                 </li>
-                <li className="mx-[15px] text-[14px] font-normal leading-[20px] uppercase text-[rgb(45,58,75)] transition duration-300 ease-linear hover:text-[rgb(255,225,21)] hover:outline-0 hover:no-underline hover:bg-none">
-                    <Link to="/about">About</Link>
-                </li>
-                <li className="mx-[15px] text-[14px] font-normal leading-[20px] uppercase text-[rgb(45,58,75)] transition duration-300 ease-linear hover:text-[rgb(255,225,21)] hover:outline-0 hover:no-underline hover:bg-none">
-                    <Link to="/contact">Contact</Link>
+                <li className="mb-2 sm:mb-0">
+                    <Link to="/products" className="text-white text-lg font-medium hover:text-blue-400 transition-colors duration-200">
+                        Tienda
+                    </Link>
                 </li>
             </ul>
         </nav>

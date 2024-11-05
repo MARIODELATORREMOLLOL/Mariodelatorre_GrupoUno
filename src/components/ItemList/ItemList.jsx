@@ -1,34 +1,36 @@
-import Item from "../Item/Item"
-import { getProducts } from "../../data/asyncMock"
-import { useEffect, useState } from "react"
+import { getProducts } from "../../data/asyncMock";
+import { useEffect, useState } from "react";
+import Item from "../Item/Item";
 import Loading from "../Loading/Loading";
 
-export default function ItemList(){
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
+export default function ItemList({ products: initialProducts }) {
+    const [products, setProducts] = useState(initialProducts || []);
+    const [loading, setLoading] = useState(!initialProducts);
 
     useEffect(() => {
-        getProducts().then((data) =>{
-            setProducts(data)
-            setLoading(false)
-        });
-    }, []);
+        if (!initialProducts) {
+            getProducts().then((data) => {
+                setProducts(data);
+                setLoading(false);
+            });
+        } else {
+            setLoading(false);
+        }
+    }, [initialProducts]);
 
-
-    return(
+    return (
         <>
-            {loading ?(
+            {loading ? (
                 <div>
                     <Loading />
                 </div>
-            ):(
-                <div className="flex flex-wrap">
-                    {products.map((prod) =>(
-                        <Item {...prod} key={prod.id}/>
+            ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4 ">
+                    {products.map((prod) => (
+                        <Item key={prod.id} {...prod} />
                     ))}
                 </div>
             )}
-
         </>
-    )
+    );
 }
