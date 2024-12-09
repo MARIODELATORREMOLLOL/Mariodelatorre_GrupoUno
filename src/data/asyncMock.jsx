@@ -16,7 +16,7 @@ export const products = [
         img: 'https://f.fcdn.app/imgs/c00db1/jackjones.cl/jackch/2130/webp/catalogo/12248579_4375018_1/400x600/camisa-lino-navy-blazer.jpg', 
         description: 'Camisa azul de alta calidad.',
         stock: 7,
-        size: ['XL'],
+        size: ['XL','L','M'],
         category: 'camisas'
     },
     {
@@ -26,7 +26,7 @@ export const products = [
         img: 'https://www.paris.cl/dw/image/v2/BCHW_PRD/on/demandware.static/-/Sites-cencosud-master-catalog/default/dw25f3c975/images/imagenes-productos/667/744924-0001-001.jpg?sw=300', 
         description: 'Zapatillas cómodas para uso diario.',
         stock: 7,
-        size: ['40'],
+        size: ['40','40.5','39'],
         category: 'zapatillas'
     },
     {
@@ -34,19 +34,19 @@ export const products = [
         name: 'Pantalón executive Business',
         price: 20000,
         img: 'https://tworldstore.cl/5516-superlarge_default/pantalon-executive-business-hombre.jpg', 
-        description: 'Pantalones de tela muy comoda',
+        description: 'Pantalones de tela muy cómoda',
         stock: 10,
-        size: ['S'], 
+        size: ['40','38'], 
         category: 'pantalones'
     },
     {
         id: 5,
-        name: 'Camiseta de fútbol de la selección chilena 2024',
+        name: 'Camiseta de fútbol de la selección chilena Roja 2024',
         price: 70000,
         img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1b7c7dbd6f804dcf9388e2133ca1b639_9366/Camiseta_Local_Chile_2024_Rojo_IP8455_01_laydown.jpg', 
         description: 'Camiseta de fútbol de chile 2024 adidas de alta calidad.',
         stock: 12,
-        size: ['M'],
+        size: ['M','L','XL'],
         category: 'camiseta'
     },
     {
@@ -57,8 +57,30 @@ export const products = [
         description: 'Jockey adidas ajustable y cómodo.',
         stock: 8,
         size: 'Ajustable a la cabeza',
-        category: 'gorro'
-    }
+        category: 'gorros'
+    },
+    {
+        id: 7,
+        name: 'Jeans Old Navy Slim 360 Hombre',
+        category: 'pantalones',
+        price: 11000,
+        description: 'Jeans cómodo',
+        img: 'https://www.oldnavy.cl/media/catalog/product/o/n/on752282_on00_1_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1150&width=858&canvas=858:1150',
+        stock: 10,
+        size: ['S','M','L'],
+        
+    },
+    {
+        id: 8,
+        name: 'Camiseta de fútbol de la selección chilena Blanca 2024',
+        price: 70000,
+        img: 'https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/b40535c4e03847c6a03096bc083034c7_9366/camiseta-visitante-chile-2024.jpg', 
+        description: 'Camiseta de fútbol de chile 2024 adidas de alta calidad.',
+        stock: 15,
+        size: ['M','S','L'],
+        category: 'camiseta'
+    },
+
 ];
 
 export const getProducts = () => {
@@ -74,7 +96,7 @@ export const getProductById = (id) => {
         const productoFiltrado = products.find((product) => product.id === parseInt(id));
         setTimeout(() => {
             res(productoFiltrado);
-        }, 2000);
+        }, 2500);
     });
 };
 
@@ -83,6 +105,6 @@ export const getProductByCategory = (category) => {
         const productosFiltrados = products.filter((product) => product.category === category);
         setTimeout(() => {
             res(productosFiltrados);
-        }, 2000);
+        }, 2500);
     });
 };
