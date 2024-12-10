@@ -21,7 +21,6 @@ export default function Inicio() {
       <div className="container mx-auto mt-24 flex justify-center">
         <div className="w-full max-w-4xl">
           <div className="carousel">
-            {/* Contenido del carrusel aquí */}
           </div>
         </div>
       </div>
