@@ -13,33 +13,24 @@ export default function Footer() {
                 <Link
                   to="/"
                   className="hover:text-yellow-300 transition-colors duration-200"
-                >
-                  Inicio
+                >Inicio
                 </Link>
               </li>
               <li>
                 <Link
                   to="/nosotros"
                   className="hover:text-yellow-300 transition-colors duration-200"
-                >
-                  Acerca de Nosotros
+                >Acerca de Nosotros
                 </Link>
               </li>
               <li>
                 <Link
                   to="/products"
                   className="hover:text-yellow-300 transition-colors duration-200"
-                >
-                  Tienda
+                >Tienda
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/contactos"
-                  className="hover:text-yellow-300 transition-colors duration-200"
-                >
-                  Contactos
-                </Link>
               </li>
             </ul>
           </div>
@@ -65,11 +56,6 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-4">Contáctanos</h2>
-            <p>Email: <span className="text-yellow-300">barrancazondacontacto@gmail.com</span></p>
-            <p>Teléfono: <span className="text-yellow-300">+56983052387</span></p>
-          </div>
         </div>
 
         <div className="mt-8 text-center">

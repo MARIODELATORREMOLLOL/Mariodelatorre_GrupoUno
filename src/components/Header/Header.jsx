@@ -56,9 +56,6 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link to="/contactos" className="hover:text-yellow-400 transition-all duration-300">
-                  Contacto
-                </Link>
               </li>
             </ul>
           </nav>
